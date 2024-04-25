@@ -230,7 +230,7 @@ def create_text_chunks(folder, starting_file, ending_file, chunk_length, chunk_o
     except FileExistsError:
         logging.exception("Folder Already Exists")
         pass
-    for index in range(starting_file,ending_file+1):
+    for index in range(starting_file,ending_file):
         file_path = folder + str(index)+'.txt'
 
         with open(file_path, 'r', encoding='utf-8') as file:
